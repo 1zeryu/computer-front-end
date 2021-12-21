@@ -2,70 +2,42 @@
 
 <head>
     <meta charset="utf-8">
-    <title>表格的综合示范</title>
+    <title>练习使用表单</title>
 </head>
 
-<body>
-    <table align="center" border="1" width=50%>
-        <caption align="center" style="font-weight: 700;">软件工程专业一年级教学计划</caption>
-        <thead>
-            <tr bgcolor="brown">
-                <th>开课学期</th>
-                <th width="60%">课程</th>
-                <th>学分</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="5" valign="center" align="center">第一学期</td>
-                <td>高等数学</td>
-                <td>4.0</td>
-            </tr>
-            <tr>
-                <td>计算机科学导论</td>
-                <td>3.0</td>
-            </tr>
-            <tr>
-                <td>网页设计</td>
-                <td>2.0</td>
-            </tr>
-            <tr>
-                <td>面向过程程序设计</td>
-                <td>2.0</td>
-            </tr>
-            <tr>
-                <td>....</td>
-                <td>....</td>
-            </tr>
-            <tr>
-                <td rowspan="5" valign="center" align="center">第二学期</td>
-                <td>概率论与数理统计</td>
-                <td>2.0</td>
-            </tr>
-            <tr>
-                <td>线性代数</td>
-                <td>2.0</td>
-            </tr>
-            <tr>
-                <td>JQuery</td>
-                <td>2.0</td>
-            </tr>
-            <tr>
-                <td>面向对象程序设计</td>
-                <td>4.0</td>
-            </tr>
-            <tr>
-                <td>....</td>
-                <td>....</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>合计学分</td>
-                <td colspan="2" align="right">30</td>
-            </tr>
-        </tfoot>
-    </table>
+<body width="100">
+    <form name="用户调查" method="post" enctype="multipart/form-data">
+        <i style="font-weight: 800;font-size: 60;width: 50%;">用户调查</i><br>
+        姓名： <input type="text" width="16" autofocus required><br>
+        密码： <input type="text" width="16" required> <br>
+        年龄： <input type="number" min="0" width="16" required> <br>
+        微博主页： <input type="url" name="url" width="16"> <br>
+        邮箱： <input type="email" name="email" width="16" placeholder="请填写经常使用的邮箱"> <br>
+        图片：<input type="file"> <br>
+        喜欢的音乐：<input type="radio" name="music" value="摇滚乐">摇滚乐
+        <input type="radio" name="music" value="爵士">爵士 <input type="radio" name="music" value="流行乐">流行乐 <br>
+        居住的城市：<input type="checkbox" name="city" value="北京">北京
+        <input type="checkbox" name="city" value="上海">上海 <input type="checkbox" name="city" value="广州">广州 <br>
+        最喜欢的网站：<select size="1" name="site">
+            <option value="xdoj">xdoj</option>
+            <option value="YouTube">YouTube</option>
+            <option value="哔哩哔哩">哔哩哔哩</option>
+            <option value="百度">百度</option>
+        </select> <br>
+        爱好：<select size="3" multiple name="habit">
+            <option value="运动">运动</option>
+            <option value="阅读">阅读</option>
+            <option value="旅游">旅游</option>
+            <option value="看电影">看电影</option>
+            <option value="刷视频">刷视频</option>
+        </select> <br>
+        留言：<textarea rows="8" cols="30" style="text-align: left;">
+事不宜迟，请留言
+            </textarea>
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </form>
 </body>
 
 </html>
