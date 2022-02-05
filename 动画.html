@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            div{
+                position: relative;
+                width: 50px;
+                height: 50px;
+                animation-name: rainbow;
+                animation-duration: 4s;
+                border-radius: 5px;
+                background-color: black;
+                margin: auto;
+            }
+            @keyframes rainbow {
+                0%{
+                    background-color: yellow;
+                    top: 0px;
+                    left: 0px;
+                }
+                50%{
+                    background-color: green;
+                    top: 50px;
+                    left: 25px;
+                }
+                100%{
+                    background-color: yellow;
+                    top: 0px;
+                    left: -25px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
